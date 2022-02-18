@@ -13,6 +13,7 @@ const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
 `
 const Info = styled.div`
     position: absolute;
@@ -32,7 +33,7 @@ const Title = styled.h1`
     background-color: gray;
     padding-left: 13px;
     padding-right: 13px;
-    opacity: 92%;
+    opacity: 85%;
 
 `
 const Button = styled.button`
