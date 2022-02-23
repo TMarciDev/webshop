@@ -5,8 +5,10 @@ import Product from "./pages/Product";
 import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 
+import SmoothLogin from "./design_test/SmoothLogin";
+
 const App = () => {
-  return <Home />;
+  return <SmoothLogin />;
 };
 
 export default App;
