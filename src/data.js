@@ -27,16 +27,19 @@ export const categories = [
     id: 1,
     img: "https://image.made-in-china.com/202f0j00AMPUDylrZYbc/Fashion-Print-Blouses-Women-Long-Style-Ladies-Long-Sleeve-Shirts.jpg",
     title: "SHIRT STYLE!",
+    cat: "glasses",
   },
   {
     id: 2,
     img: "https://wallpaper.csplague.com/wp-content/uploads/2020/02/wool-dress-dress-with-pockets-light-grey-dress-winter-dress.jpg",
     title: "LONGWEAR",
+    cat: "woman",
   },
   {
     id: 3,
     img: "https://media.glamour.com/photos/5f56500fffedaa3e27f5be45/master/w_663,h_1000,c_limit/plus%20size%20jeans.jpg",
-    title: "RETRO",
+    title: "JEANS",
+    cat: "man",
   },
 ];
 

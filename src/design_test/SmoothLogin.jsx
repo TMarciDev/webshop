@@ -1,6 +1,5 @@
 import {
   BusinessCenterOutlined,
-  CameraRollRounded,
   KeyboardCapslockOutlined,
   LockOutlined,
 } from "@material-ui/icons";
@@ -34,9 +33,9 @@ const Wrapper = styled.div`
   ${mobile({
     right: "0px",
     top: "0px",
-    width: "98vw",
+    width: "96vw",
     height: "80wh",
-    margin: "10vh 1vw",
+    margin: "10vh 2vw",
   })}
 `;
 const WhiteBox = styled.div`

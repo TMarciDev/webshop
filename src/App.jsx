@@ -5,10 +5,25 @@ import Product from "./pages/Product";
 import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 
-import SmoothLogin from "./design_test/SmoothLogin";
+//import SmoothLogin from "./design_test/SmoothLogin";
+
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 const App = () => {
-  return <SmoothLogin />;
+  const user = true;
+  return (
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/products/:category" element={<ProductList />} />
+        <Route path="/product/:id" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
+
+        <Route path="/Login" element={ user ? <Navigate to="/" /> : <Login/>} />
+        <Route path="/register" element={ user ? <Navigate to="/" /> : <Register/>} />
+      </Routes>
+    </Router>
+  );
 };
 
 export default App;
