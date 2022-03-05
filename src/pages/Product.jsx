@@ -134,7 +134,7 @@ const Product = () => {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await publicRequest.get("/products/find/" + id);
+        const res = await publicRequest.get("products/find/" + id);
         setProduct(res.data);
       } catch {}
     };
@@ -150,7 +150,7 @@ const Product = () => {
           <Image src={product.img} />
         </ImgContainer>
         <InfoContainer>
-          <Title>Deniuim Lipsuim</Title>
+          <Title>{product.title}</Title>
           <Desc>
             Aliquam accumsan vitae magna et sagittis. Cras arcu nunc, laoreet id
             ipsum non, vestibulum dignissim mi. Class aptent taciti sociosqu ad
