@@ -3,6 +3,8 @@ import { Badge } from "@material-ui/core";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
@@ -33,7 +35,7 @@ const Language = styled.div`
   cursor: pointer;
 
   ${mobile({
-    display: "none"
+    display: "none",
   })}
 `;
 
@@ -71,7 +73,7 @@ const Right = styled.div`
 
   ${mobile({
     justifyContent: "center",
-    flex: "2"
+    flex: "2",
   })}
 `;
 
@@ -83,18 +85,20 @@ const MenuItem = styled.div`
   ${mobile({
     fontSize: "12px",
     marginLeft: "0px",
-    marginRight: "10px"
+    marginRight: "10px",
   })}
 `;
 
 const Navbar = () => {
+  const quantity = useSelector((state) => state.cart.quantity);
+
   return (
     <Container>
       <Wrapper>
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input placeholder="search"/>
+            <Input placeholder="search" />
             <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
@@ -105,9 +109,11 @@ const Navbar = () => {
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlined />
-            </Badge>
+            <Link to="/cart">
+              <Badge badgeContent={quantity} color="primary">
+                <ShoppingCartOutlined />
+              </Badge>
+            </Link>
           </MenuItem>
         </Right>
       </Wrapper>
