@@ -21,7 +21,7 @@ const App = () => {
 	return (
 		<Router>
 			<Routes>
-				<Route exact path='/webshop' element={<Home />} />
+				<Route exact path='/' element={<Home />} />
 				<Route path='/products/:category' element={<ProductList />} />
 				<Route path='/product/:id' element={<Product />} />
 				<Route path='/cart' element={<Cart />} />
